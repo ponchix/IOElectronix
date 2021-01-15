@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg  bg-light ">
+    <a class="navbar-brand" href="#"><img src="../../../assets/img/LogoIO.jpg"  width="80px" height="80px"> IOElectronix</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/']" routerLinkActive="router-link-active" >Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/catalogo']" routerLinkActive="router-link-active" >Productos </a>
+        </li>
+        <li class="nav-item  d-flex justify-content-end">
+          <a class="nav-link d-flex" href="/registro">Registrar</a>
+        </li>
+        <li *ngIf="authState==false" class="nav-item d-flex">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li *ngIf="authState==true">
+        <div class="col-md-2">
+          <button (click)="logout()" class="btn btn-secondary btn-sm" name="btnAddMore" type="button">Logout</button>
+                </div>
+      </li>
+        <li class="nav-item ">
+          <!-- ACCOUNT -->
+          <div class="col-md-8 ">
+            <div class="header-ctn d-flex">
+              <!-- Cart -->
+              
+              <div class="dropdown" >
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" style="cursor: pointer;">
+                  <i class="fa fa-shopping-cart"></i>
+                  
+                  <div class="qty">{{cartData.data[0].numInCart !== 0 ? cartData.data.length : 0}}</div>
+                </a>
+                <div class="cart-dropdown" >
+                  <div class="cart-list" *ngIf="cartData.data[0].numInCart !== 0">
+                    <div class="product-widget" *ngFor="let c of cartData.data; let i=index">
+                      <div class="product-img">
+                        <img src="{{c.product?.imagen}}" alt="" width="20px">
+                      </div>
+                      <div class="product-body">
+                        <h3 class="product-name">{{c.product?.name}}</h3>
+                        <h4 class="product-price"><span class="qty">{{c.numInCart}} x </span>{{c.product?.precio | currency:'MXN'}}</h4>
+                      </div>
+                      <button class="delete" (click)="cartService.DeleteProductFromCart(i)"><i class="fa fa-close"></i></button>
+                    </div>
+  
+  
+                  </div>
+                  <div class="cart-summary">
+                    <small>{{cartData.data[0].numInCart !== 0 ? cartData.data.length : 0}} Productos</small>
+                    <h5>TOTAL : {{cartTotal | currency:'MXN'}}</h5>
+                  </div>
+                  <div class="cart-btns">
+                    <a routerLink="/carrito">Ir a Carrito <i class="fas fa-shopping-cart"></i></a>
+                    <a routerLink="/revisado">Terminar Compra <i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- /Cart -->
+  
+              <!-- Menu Toogle -->
+              <div class="menu-toggle">
+                <a href="#">
+                  <i class="fa fa-bars"></i>
+                  <span>Menu</span>
+                </a>
+              </div>
+              <!-- /Menu Toogle -->
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  
+  <!-- HEADER -->
+  
+  
+  <!-- NAVIGATION -->
+  
+  
+  <!-- /NAVIGATION -->
+  

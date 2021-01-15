@@ -1,0 +1,159 @@
+<ngx-spinner
+  bdColor= "rgba(28,109,170,0.8)"
+  size="large"
+  color="yellow"
+  type="pacman"
+  [fullScreen]="false"
+>
+  <p style="font-size: 30px; color: ivory">Terminando orden de compra</p>
+</ngx-spinner>
+
+<div class="section" *ngIf="cartData.total > 0">
+<!-- container -->
+<div class="container">
+  <!-- row -->
+  <div class="row">
+    <div class="col-md-12 order-details">
+      <div class="section-title text-center">
+        <h3 class="title">DETALLE DE LA COMPRA</h3>
+      </div>
+      <div class="order-summary">
+        <div class="order-col">
+          <div><strong>PRODUCTO</strong></div>
+          <div><strong>SUBTOTAL</strong></div>
+        </div>
+        <div class="order-products">
+          <div class="order-col" *ngFor="let c of cartData.data;">
+            <div>{{c.numInCart}}x {{c.product.name}}</div>
+            <div>{{(c.product.precio*c.numInCart) | currency:'MXN'}}</div>
+          </div>
+        </div>
+        <div class="order-col">
+          <div>Envio</div>
+          <div *ngIf="cartData.total > 499"><strong>GRATIS</strong></div>
+          <div *ngIf="cartData.total < 499"><strong>$90</strong></div>
+        </div>
+        <div *ngIf="cartData.total>499" class="order-col dropdown-divider">
+          <div><strong>TOTAL </strong></div>
+          <div><strong class="order-total">{{cartTotal | currency:'MXN'}}</strong></div>
+        </div>
+        <div *ngIf="cartData.total<499" class="order-col dropdown-divider">
+          <div><strong>TOTAL + ENVIO</strong></div>
+          <div><strong class="order-total">{{cartTotal+90 | currency:'MXN'}}</strong></div>
+        </div>
+      </div>
+      <div class="payment-method">
+        <div class="input-radio">
+          <input type="radio" name="payment" id="payment-1">
+          <label for="payment-1">
+            <span></span>
+            Depósito
+          </label>
+          <div class="caption">
+            <p class="adorno">No. de Cuenta</p>
+            <p class="adorno">4589-5896-1259-3689</p>
+            <p> <img class="deposito"src="../../../assets/img/oxxo.png" alt=""> <img class="deposito"src="../../../assets/img/mercado pago.jpg">  </p>
+          </div>
+        </div>
+        <div class="input-radio">
+          <input type="radio" name="payment" id="payment-2">
+          <label for="payment-2">
+            <span></span>
+            Paypal
+          </label>
+          <div class="caption">
+            <a href="https://www.paypal.com/mx/webapps/mpp/account-selection?kid=p19042492565&ds_rl=1246619&gclid=Cj0KCQiA9P__BRC0ARIsAEZ6irhtGii-35OzCU1S4Vd7ZPaB9ylc3OHAuuUyxhKbQIGk2qL6mZyZxM4aAjUwEALw_wcB&gclsrc=aw.ds"><p class="adorno">Inicio de sesión</p></a>
+            <p> <img class="deposito" src="../../../assets/img/paypal.jpg" alt="">  </p>
+          </div>
+        </div>
+        <div class="input-radio">
+          <input type="radio" name="payment" id="payment-3">
+          <label for="payment-3">
+            <span></span>
+            Tarjeta Débito/Crédito
+          </label>
+          <div class="caption">
+            <p class="Nueva">Nueva Tarjeta</p>
+            <p>     
+              <input class="tarjeta" type="text"  name="tarjeta" placeholder="Ingresa Tarjeta">
+           </p>
+           <p>     
+            <input class="cvv" type="text"  name="cvv" placeholder="CVV">
+         </p>
+         <p>     
+          <input class="tarjeta" type="text"  name="vencimiento" placeholder="Vencimiento ejem. 12/23">
+       </p>
+         <p>     
+          <input class="tarjeta" type="text"  name="titular" placeholder="Nombre del titular">
+       </p>
+       <p><img class="deposito"src="../../../assets/img/visa.jpg" alt=""> <img class="deposito"src="../../../assets/img/mastercard.png" alt=""> <img src="../../../assets/img/amex.png" alt="" class="deposito"></p>
+          </div>
+        </div>
+      </div>
+      <div class="input-checkbox">
+              <label for="terms">
+          <span></span>
+         Al hacer click en COMPRAR acepta los <a [routerLink]="['/terminosycondiciones']" routerLinkActive="router-link-active" >Términos y condiciones</a>
+        </label>
+      </div>
+      <button type="submit" name="boton" class="btn-outline-danger btn-sm my-2 btn-block" [disabled]="cartTotal <= 0" (click)="onCheckout()">Comprar</button>
+    </div>
+
+
+    <!-- Order Details -->
+
+    <!-- /Order Details -->
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Billing Details -->
+      <div class="billing-details">
+        <div class="section-title">
+          <h3 class="title">Dirección</h3>
+        </div>
+        <div class="form-group">
+          <input  type="text" [(ngModel)]="dir.calle" name="address" placeholder="Calle">
+        </div>
+        <div class="form-group">
+          <input  type="text" [(ngModel)]="dir.calle2" name="address" placeholder="Calle 2">
+        </div>
+        <div class="form-group">
+          <input  type="text" [(ngModel)]="dir.ciudad" name="city" placeholder="Ciudad">
+        </div>
+        <div class="form-group">
+          <input type="text" [(ngModel)]="dir.estado" name="country" placeholder="Estado">
+        </div>
+        <div class="form-group">
+          <input  type="text" [(ngModel)]="dir.pais" name="address" placeholder="Pais">
+        </div>
+        <!-- <div class="form-group">
+          <input  type="text" [(ngModel)]="dir.telefono" name="zip-code" placeholder="Codigo postal">
+        </div> -->
+        <div class="form-group">
+          <input  type="text" [(ngModel)]="dir.telefono" name="telefono" placeholder="Telefono">
+        </div>
+        <div class="form-group">
+          <input  type="text" [(ngModel)]="dir.user_id" name="telefono" placeholder="No. cliente">
+        </div>
+        <p><button (click)="alta()">Agregar</button></p>
+             </div>
+      <!-- /Billing Details -->
+
+      <!-- Shiping Details -->
+
+      <!-- /Shiping Details -->
+
+      <!-- Order notes -->
+      <!-- /Order notes -->
+    </div>
+  </div>
+  <!-- /row -->
+</div>
+<!-- /container -->
+</div>
+<!-- /SECTION -->
+
+<div class="text-center my-5" *ngIf="cartData.total <= 0">
+  <h4>Tu carrito esta vacío</h4>
+  <button class="btn btn-primary btn-lg mt-3" routerLink="/">Home</button>
+</div>

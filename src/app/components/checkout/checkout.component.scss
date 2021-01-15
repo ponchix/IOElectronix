@@ -1,0 +1,73 @@
+.order-details{
+    background: #0e677e;
+    border: none !important;
+    border-top: none !important;
+    color: ivory;
+}
+.title{
+    color: ivory;
+}
+.order-total{
+    color: ivory !important;
+}
+.deposito{
+margin-left: 7px;
+ width: 150px;
+ height: 95px;
+ text-align: center !important;
+}
+.adorno{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+.tarjeta{
+    width: 20% !important;
+}
+.Nueva{
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+text-transform: uppercase;
+}
+.cvv{
+    width: 10% !important;
+    text-align: left !important;
+    margin-left: 0px;
+}
+
+.btn-outline-danger{
+    background: #FFF;
+    color: #0e677e;
+    outline:#0e677e !important;
+    border: none !important;
+    text-transform: uppercase;
+}
+.btn-outline-danger:hover{
+    background:  #0e677e;
+    color: #FFF;
+    border: #FFF !important;
+    outline: #FFF !important;
+    border:solid 2px !important;
+}
+
+button:disabled{
+    background: rgb(63, 60, 60);
+}
+button:enabled{
+    background: #FFF;
+    color: #0e677e;
+    outline:#0e677e !important;
+    border: none !important;
+    text-transform: uppercase;
+}
+input{
+    width: 70%;
+    height: 35px;
+    border: none !important;
+}
+.billing-details{
+    text-align: center;
+}
+.col-md-8{
+    text-align: center;
+}
