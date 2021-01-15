@@ -1,1 +1,53 @@
-<p>thankyou works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- <div class="jumbotron text-center">
+          <h1 class="display-3">GRACIAS POR SU COMPRA</h1>
+          <p class="lead"><strong>IOElectronix</strong> </p>
+          
+          <hr>
+          <p>
+  
+          
+        </div> -->
+        <p class="logo"><img src="../../../assets/img/LogoIO.jpg" width="250px" height="250px" alt=""></p>
+        <p class="orden">Numero de orden : <strong>{{orderId}}</strong></p>
+        <table class="table table-dark table-hover table-borderless">
+          <thead>
+          <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let p of products">
+            <td>
+              <img [src]="p.imagen" alt="{{p.nombre}}" class="img-thumbnail" width="90px" height="100px">
+            </td>
+            <td>{{p.nombre}}</td>
+            <td>{{p.precio | currency:'MXN'}}</td>
+            <td>{{p.quantityOrdered}}</td>
+          </tr>
+  
+          <tr class="border-0">
+                    <td>Envío</td>
+            <td *ngIf="cartTotal<499"> $90.00</td>
+            <td *ngIf="cartTotal>499"> GRATIS</td>
+            <td>SUBTOTAL</td>
+            <td>{{cartTotal | currency:'MXN'}}</td>
+            <td>TOTAL</td>
+            <td *ngIf="cartTotal<499">{{cartTotal+90 | currency:'MXN'}}</td>
+            <td *ngIf="cartTotal>499">{{cartTotal | currency:'MXN'}}</td>
+  
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  

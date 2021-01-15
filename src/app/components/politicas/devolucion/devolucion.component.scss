@@ -1,0 +1,28 @@
+.titulo{
+    font-size: 40px;
+    font-weight: bolder;
+    text-transform: uppercase;
+
+    }
+.cuerpo{
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+}
+.sub{
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 25px;
+}
+.lista{
+    margin-left: 3rem;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    background: rgba(255, 255, 255, 0.438);
+    height: fit-content;
+}

@@ -1,0 +1,255 @@
+.disabled {
+    cursor: not-allowed;
+  }
+  
+  .card-title{
+    text-transform: uppercase !important;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  .my-2{
+    background-color: #0e677e;
+    color: ivory;
+  }
+  .btn-outline-primary{
+  background: #0e517ede;
+  border: none;
+  color: ivory;
+  }
+  
+  button:hover{
+    background-color: #0d4266e1 ;
+    border-radius: 20% !important;
+  }
+  
+  .titulo{
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: ivory;
+  font-size: 35px;
+  margin-left: 10%;
+  margin-top: 1rem;
+  position: initial;
+  }
+  
+  .img-fluid{
+    height: 450px;
+    width: 100%;
+    border: solid 5px 5px;
+    outline-style: ridge;
+    border:teal;
+  }
+  
+  
+  .horizontal-scroll-contenedor{
+    width: auto;
+    height: 210px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    background: #f0f0f000;
+    white-space: nowrap;
+    padding-bottom: 10px;
+  }
+  
+  .horizontal-scroll-contenedor > div {
+    width: 100px;
+    height: 50px;
+    margin: 10px 10px 10px 0px;
+      padding-bottom: 15px;
+    display: inline-block;
+    text-align: center;
+  
+    line-height: 50px;
+  }
+  
+  .scroll{
+    margin-left: 250px !important;
+    width: 100%;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+   }
+   .pagos:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+   }
+   .pagos{
+    width: 100%;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+   }
+   .scroll:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+   }
+   
+   .formas{
+     text-transform: uppercase;
+     color: ivory !important;
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     font-size: 40px;
+     margin-left: 10px;
+     text-align: center !important;
+     margin-left: auto;
+     margin-right: auto;
+  
+   }
+  
+   .title{
+    text-transform: uppercase;
+    color: ivory !important;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    margin-left: 10px;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    letter-spacing: 2px;
+   }
+  
+  section {
+    width: 100%;
+    height:auto;
+    padding:10px;
+    margin: 40px auto 45px auto;
+  }
+  
+  section:after {
+    content: " ";
+    display: block;
+    height: 100;
+    clear: both;
+  }
+  
+  section h1{ 
+    text-align: center;
+    font-size: 35px;
+    color: #FFF;
+  }
+  
+  p {
+    color: #000;
+  }
+  
+  p.note {
+    color: #FFF;
+    font-size:14px;
+    text-align: center;
+  }
+  
+  textarea{
+    display:block;
+    width:500px;
+    height:200px
+  }
+  
+  .fa-dhl{
+    font-size: 150px;
+    text-align: center;
+    align-content: center;
+    color: ivory;
+  
+  }
+  
+  .fa-hand-holding-usd{
+    font-size: 100px;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 3rem;
+    color: ivory;
+  }
+  .fa-thumbs-up{
+    font-size: 100px;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 3rem;
+    color: ivory;
+  }
+  
+  .ship{
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+    color: ivory;
+  }
+  .ship2{
+    font-size: 27px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+    color: ivory;
+  }
+  
+  .list-group{
+    width: 100%;
+    background: none;
+    margin-bottom: 2rem;
+  }
+  
+  .list-group-horizontal{
+    width: 100%;
+    background:none;
+    border: none;
+  }
+  .list-group-item{
+    text-align: center;
+    width: 100%;
+    background: #0e687ebd;
+    border: none;
+  }
+  
+  p{
+    font-size: medium;
+    color: ivory !important;
+    font-size: 20px;
+    text-align: center;
+    
+  }
+  
+  .categoria{
+    text-transform: uppercase;
+    text-align: center;
+    color: ivory;
+  }
+  .shop-body{
+    text-transform: uppercase;
+    font-size:45px;
+   
+  }
+  h3{
+    font-size: 45px;
+    margin-left: 4rem;
+  }
+  .cta-btn{
+    margin-left: 4rem;
+  }
+  
+  .aviso{
+    font-size: 12px !important;
+    text-align: left !important;
+  }
+  
+  .homebanner{
+    text-align: center;
+    color: ivory;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-size: 45px;
+    
+  }
+  .logobanner{
+    width: 350px;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    }
+    .home{
+      background:  #0e687ebd;
+    }
+    .izquierda{
+      text-align: left;
+    }

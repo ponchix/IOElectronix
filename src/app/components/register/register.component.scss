@@ -1,0 +1,51 @@
+.jumbotron{
+    background-color: #0e687e05;
+}
+.titulo{
+    text-transform: uppercase;
+    color: ivory;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+.form-group{
+    text-transform: uppercase;
+    color: ivory;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.input,
+fieldset{
+    width : 100%;
+    border: 1px solid rgb(11, 172, 236);
+    box-sizing: border-box
+}
+
+form {
+    font: 1em sans-serif;
+   
+  }
+  
+  p > label {
+    display: block;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  textarea,
+  fieldset {
+    width : 100%;
+    border: 1px solid #333;
+    box-sizing: border-box;
+  }
+  
+  input:invalid {
+    box-shadow: 0 0 8px 3px rgb(214, 126, 26);
+  }
+  
+  input:focus:invalid {
+    box-shadow: none;
+  }

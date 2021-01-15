@@ -1,1 +1,204 @@
-<p>home works!</p>
+<!----Banner-->
+<div class="container">
+    <div class="home">
+     
+      
+    <div class="homebanner">
+       Conectando  <img class="logobanner" src="../../../assets/img/LogoIO.jpg" alt=""> Ideas...
+    </div>
+  </div>
+  </div>
+  <!-- SECTION -->
+  <div class="section">
+    <!-- container -->
+    <div class="container">
+      <!-- row -->
+      <div class="row">
+        <!-- shop -->
+        <div class="col-md-12 col-xs-6">
+          <div class="shop">
+            <div class="shop-img">
+              <img src="https://firebasestorage.googleapis.com/v0/b/e-commerce-f9fe1.appspot.com/o/maxresdefault.jpg?alt=media&token=b9d11d3c-1414-47ac-beaf-f09a2e90b23c" height="450px" alt="">
+            </div>
+            <div class="shop-body">
+              <h3>Curso<br>Arduino</h3>
+              <a href="https://www.youtube.com/watch?v=eBVvD85Ml2c&list=PLkjnQ3NFTPnY1eNyLDGi547gkVui1vyn2" class="cta-btn">Visitar <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- /shop -->
+  
+  
+  
+  
+  
+  
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /SECTION -->
+  
+  <!-- SECTION -->
+  <div class="section">
+    <!-- container -->
+    <div class="container">
+      <!-- row -->
+      <div class="row">
+  <div class="row">
+    <!----Banner-->
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item"> <i class="fab fa-dhl"></i>
+      <div class="ship">Envíos gratis*</div></li>
+      <li class="list-group-item"><i class="fas fa-hand-holding-usd"></i>
+        <div class="ship">pago seguro</div>
+      </li>
+      <li class="list-group-item"><i class="fas fa-thumbs-up"></i>
+      <div class="ship2">calificaciones positivas</div></li>
+    </ul>
+  </div>
+    <!---/Banner-->
+  <!---SCROLL HORIZONTAL-->
+  <div class="formas">
+    formas de pago
+  </div>
+  <section>
+    <div class="horizontal-scroll-contenedor">
+        <div class="pagos"><img src="../../../assets/img/visa.jpg" height="180px" alt=""></div>
+        <div class="scroll"><img src="../../../assets/img/mastercard.png" height="180px"  width="345px"></div>
+        <div class="scroll"><img src="../../../assets/img/paypal.jpg" height="180px"  width="345px"></div>
+        <div class="scroll"><img src="../../../assets/img/mercado pago.jpg" height="180px"  width="345px"></div>
+        <div class="scroll"><img src="../../../assets/img/oxxo.png" height="180px"  width="345px"></div>
+        <div class="scroll"><img src="../../../assets/img/amex.png" height="180px"  width="345px"></div>
+    </div>
+  </section>
+  <!---/SCROLL HORIZONTAL---->
+        <!-- shop -->
+        <div class="col-md-12 col-xs-6">
+          <div class="shop">
+            <div class="shop-img">
+              <img src="https://firebasestorage.googleapis.com/v0/b/e-commerce-f9fe1.appspot.com/o/ArudinoLo.jpg?alt=media&token=3cc9a379-0620-4a0b-bd38-4a777f1fbe43" height="450px" alt="">
+            </div>
+            <div class="shop-body">
+              <h3><br>Arduino</h3>
+              <a href="https://www.arduino.cc/" class="cta-btn">Visitar <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- /shop -->
+  <!-- section title -->
+        <div class="col-md-12">
+          <div class="section-title">
+            <h3 class="title">Catalogo</h3>
+          </div>
+        </div>
+        <!-- /section title -->
+  
+        <!-- Products tab & slick -->
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-4 col-sm-4" *ngFor="let p of products">
+              <div class="card my-2">
+                <img [src]="p.imagen" alt="{{p.nombre}}" width="200px" height="250px" class="card-img-top" (click)="selectProduct(p.id)" style="cursor:pointer;">
+                <div class="card-header">
+                  <div class="card-title">
+                    <p>{{p.name | titlecase}}</p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h6 class="categoria">{{p.categoria}}</h6>
+                  <p class="lead">{{p.precio | currency:'MXN'}}</p>
+                </div>
+  
+                <div class="row d-flex justify-content-center border-primary my-3">
+                  <div class="col-md-6 ">
+                    <button class="btn btn-outline-primary btn-sm btn-block"
+                            [class.disabled]="p.quantity < 1"
+                            [class.btn-outline-danger]="p.quantity < 1"
+                            (click)="AddProduct(p.id)" [disabled]="p.cantidad < 1">
+                      {{ p.cantidad < 1 ? "NO STOCK" : "Agregar al carrito"}}
+                    </button>
+                  </div>
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+      </div>
+            <!-- shop -->
+            <div class="col-md-12 col-xs-6">
+              <div class="shop">
+                <div class="shop-img">
+                  <img src="https://firebasestorage.googleapis.com/v0/b/e-commerce-f9fe1.appspot.com/o/micro.png?alt=media&token=08909beb-68e1-4317-94b9-823a1c6f3058" height="450px" width="100%" alt="">
+                </div>
+                <div class="shop-body">
+                  <h3><br>Microchip</h3>
+                  <a href="https://www.microchip.com/" class="cta-btn">Visitar <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- /shop -->
+    </div>
+  
+  </div>
+  <div class="foot">
+    <p class="aviso">*Envio gratis en la compra minima de $499 a cualquier parte del país</p>
+    <p class="aviso">*Costo del envio es de $90 MXN</p>
+  </div>
+  <!-- /container -->
+  
+  <!-- /SECTION -->
+  
+  <!-- HOT DEAL SECTION -->
+  <!-- <div id="hot-deal" class="section">
+     container -->
+    <!-- <div class="container">
+     row -->
+      <!-- <div class="row">
+              <div class="col-md-12">
+          <div class="hot-deal">
+            <ul class="hot-deal-countdown">
+              <li>
+                <div>
+                  <h3>02</h3>
+                  <span>Days</span>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>10</h3>
+                  <span>Hours</span>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>34</h3>
+                  <span>Mins</span>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>60</h3>
+                  <span>Secs</span>
+                </div>
+              </li>
+            </ul>
+            <h2 class="text-uppercase">hot deal this week</h2>
+            <p>New Collection Up to 50% OFF</p>
+            <a class="primary-btn cta-btn" href="#">Shop now</a>
+          </div>
+        </div>
+      </div>
+       /row 
+    </div>
+     /container 
+  </div>  -->
+  <!-- /HOT DEAL SECTION -->
+  
+  
+  

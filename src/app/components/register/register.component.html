@@ -1,1 +1,46 @@
-<p>register works!</p>
+
+<div class="container">
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-6 d-flex mx-auto flex-column">
+          <ng-container >
+            <div class="titulo">Registro</div>
+          </ng-container>
+          <form novalidate #myform="ngForm">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input class="form-control" id="password" type="text" [(ngModel)]="nombre" name="Nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="apellido">Apellido Paterno</label>
+                <input class="form-control" id="password" type="text" [(ngModel)]="apellido" name="apellido" required>
+              </div>
+              <div class="form-group">
+                <label for="apellidoM">Apellido Materno</label>
+                <input class="form-control" id="password" type="text" [(ngModel)]="apellidoM" name="apellidoM" required>
+              </div>
+              <div class="form-group">
+                <label for="edad">Edad</label>
+                <input class="form-control" id="password" type="text" [(ngModel)]="edad" name="edad" >
+              </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input class="form-control" id="email" type="email" [(ngModel)]="email" name="email" required>
+            </div>
+              <div class="form-group">
+              <label for="password">Password</label>
+              <input class="form-control" id="password" type="password" [(ngModel)]="password" name="password" placeholder="Min 6 Caracteres" required minlength="6" maxlength="8">
+            </div>
+            
+            
+            <div class="d-flex flex-column align-items-center justify-content-around">
+              <button class="btn btn-primary btn-sm btn-block" (click)="registrar(myform)" [disabled]="myform.invalid && (myform.touched || myform.dirty)">Registrar</button>
+            </div>
+          </form>
+  
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
